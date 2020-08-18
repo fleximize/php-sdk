@@ -1,6 +1,6 @@
 <?php
 /**
- * LoginCredentials
+ * AllOfinlineResponse2002ApplicationStatus
  *
  * PHP version 5
  *
@@ -27,20 +27,17 @@
  */
 
 namespace Swagger\Client\Model;
-
-use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * LoginCredentials Class Doc Comment
+ * AllOfinlineResponse2002ApplicationStatus Class Doc Comment
  *
  * @category Class
- * @description Login credentials object
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class LoginCredentials implements ModelInterface, ArrayAccess
+class AllOfinlineResponse2002ApplicationStatus extends AppStatus 
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +46,7 @@ class LoginCredentials implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'loginCredentials';
+    protected static $swaggerModelName = 'AllOfinline_response_200_2ApplicationStatus';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +54,7 @@ class LoginCredentials implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user_name' => 'string',
-'password' => 'string'    ];
+            ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,8 +62,7 @@ class LoginCredentials implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'user_name' => 'email',
-'password' => 'password'    ];
+            ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -76,7 +71,7 @@ class LoginCredentials implements ModelInterface, ArrayAccess
      */
     public static function swaggerTypes()
     {
-        return self::$swaggerTypes;
+        return self::$swaggerTypes + parent::swaggerTypes();
     }
 
     /**
@@ -86,7 +81,7 @@ class LoginCredentials implements ModelInterface, ArrayAccess
      */
     public static function swaggerFormats()
     {
-        return self::$swaggerFormats;
+        return self::$swaggerFormats + parent::swaggerFormats();
     }
 
     /**
@@ -96,8 +91,7 @@ class LoginCredentials implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_name' => 'user_name',
-'password' => 'password'    ];
+            ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -105,8 +99,7 @@ class LoginCredentials implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user_name' => 'setUserName',
-'password' => 'setPassword'    ];
+            ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -114,8 +107,7 @@ class LoginCredentials implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user_name' => 'getUserName',
-'password' => 'getPassword'    ];
+            ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -125,7 +117,7 @@ class LoginCredentials implements ModelInterface, ArrayAccess
      */
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -135,7 +127,7 @@ class LoginCredentials implements ModelInterface, ArrayAccess
      */
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -145,7 +137,7 @@ class LoginCredentials implements ModelInterface, ArrayAccess
      */
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -160,12 +152,6 @@ class LoginCredentials implements ModelInterface, ArrayAccess
 
     
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var mixed[]
-     */
-    protected $container = [];
 
     /**
      * Constructor
@@ -175,8 +161,8 @@ class LoginCredentials implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user_name'] = isset($data['user_name']) ? $data['user_name'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        parent::__construct($data);
+
     }
 
     /**
@@ -186,14 +172,8 @@ class LoginCredentials implements ModelInterface, ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['user_name'] === null) {
-            $invalidProperties[] = "'user_name' can't be null";
-        }
-        if ($this->container['password'] === null) {
-            $invalidProperties[] = "'password' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -208,54 +188,6 @@ class LoginCredentials implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets user_name
-     *
-     * @return string
-     */
-    public function getUserName()
-    {
-        return $this->container['user_name'];
-    }
-
-    /**
-     * Sets user_name
-     *
-     * @param string $user_name Account username. Usually email address
-     *
-     * @return $this
-     */
-    public function setUserName($user_name)
-    {
-        $this->container['user_name'] = $user_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets password
-     *
-     * @return string
-     */
-    public function getPassword()
-    {
-        return $this->container['password'];
-    }
-
-    /**
-     * Sets password
-     *
-     * @param string $password Account password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        $this->container['password'] = $password;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      *

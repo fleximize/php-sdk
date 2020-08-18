@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse400Test
+ * AllOfinlineResponse2002ApplicationStatusTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Swagger\Client;
 
 /**
- * InlineResponse400Test Class Doc Comment
+ * AllOfinlineResponse2002ApplicationStatusTest Class Doc Comment
  *
  * @category    Class
- * @description InlineResponse400
+ * @description AllOfinlineResponse2002ApplicationStatus
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse400Test extends \PHPUnit_Framework_TestCase
+class AllOfinlineResponse2002ApplicationStatusTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,16 +69,9 @@ class InlineResponse400Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "InlineResponse400"
+     * Test "AllOfinlineResponse2002ApplicationStatus"
      */
-    public function testInlineResponse400()
-    {
-    }
-
-    /**
-     * Test attribute "error"
-     */
-    public function testPropertyError()
+    public function testAllOfinlineResponse2002ApplicationStatus()
     {
     }
 }

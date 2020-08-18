@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**application_status** | [****](.md) |  | [optional] 
+**application_status** | [**AllOfinlineResponse2002ApplicationStatus**](AllOfinlineResponse2002ApplicationStatus.md) |  | [optional] 
 **internal_score_status** | **string** | String describing if application passed, failed or have been referred for manual review | [optional] 
 **internal_id** | **string** | Client internall ID | [optional] 
 

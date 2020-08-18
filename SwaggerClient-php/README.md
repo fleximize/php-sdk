@@ -141,6 +141,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [Address](docs/Model/Address.md)
+ - [AllOfinlineResponse2002ApplicationStatus](docs/Model/AllOfinlineResponse2002ApplicationStatus.md)
  - [AppStatus](docs/Model/AppStatus.md)
  - [Application](docs/Model/Application.md)
  - [Body](docs/Model/Body.md)
