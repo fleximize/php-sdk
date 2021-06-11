@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2001
+ * InlineResponse422
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * InlineResponse2001 Class Doc Comment
+ * InlineResponse422 Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2001 implements ModelInterface, ArrayAccess
+class InlineResponse422 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_1';
+    protected static $swaggerModelName = 'inline_response_422';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'application_id' => 'string',
-'internal_score_status' => 'string'    ];
+        'error' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +64,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'application_id' => null,
-'internal_score_status' => null    ];
+        'error' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +93,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'application_id' => 'application_id',
-'internal_score_status' => 'internal_score_status'    ];
+        'error' => 'error'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +101,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'application_id' => 'setApplicationId',
-'internal_score_status' => 'setInternalScoreStatus'    ];
+        'error' => 'setError'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +109,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'application_id' => 'getApplicationId',
-'internal_score_status' => 'getInternalScoreStatus'    ];
+        'error' => 'getError'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -157,22 +152,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const INTERNAL_SCORE_STATUS_PASSED = 'PASSED';
-const INTERNAL_SCORE_STATUS_FAILED = 'FAILED';
-const INTERNAL_SCORE_STATUS_REFERRED = 'REFERRED';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getInternalScoreStatusAllowableValues()
-    {
-        return [
-            self::INTERNAL_SCORE_STATUS_PASSED,
-self::INTERNAL_SCORE_STATUS_FAILED,
-self::INTERNAL_SCORE_STATUS_REFERRED,        ];
-    }
+    
 
     /**
      * Associative array for storing property values
@@ -189,8 +169,7 @@ self::INTERNAL_SCORE_STATUS_REFERRED,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['application_id'] = isset($data['application_id']) ? $data['application_id'] : null;
-        $this->container['internal_score_status'] = isset($data['internal_score_status']) ? $data['internal_score_status'] : null;
+        $this->container['error'] = isset($data['error']) ? $data['error'] : null;
     }
 
     /**
@@ -201,14 +180,6 @@ self::INTERNAL_SCORE_STATUS_REFERRED,        ];
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getInternalScoreStatusAllowableValues();
-        if (!is_null($this->container['internal_score_status']) && !in_array($this->container['internal_score_status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'internal_score_status', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -226,58 +197,25 @@ self::INTERNAL_SCORE_STATUS_REFERRED,        ];
 
 
     /**
-     * Gets application_id
+     * Gets error
      *
      * @return string
      */
-    public function getApplicationId()
+    public function getError()
     {
-        return $this->container['application_id'];
+        return $this->container['error'];
     }
 
     /**
-     * Sets application_id
+     * Sets error
      *
-     * @param string $application_id Unique application ID
+     * @param string $error error
      *
      * @return $this
      */
-    public function setApplicationId($application_id)
+    public function setError($error)
     {
-        $this->container['application_id'] = $application_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets internal_score_status
-     *
-     * @return string
-     */
-    public function getInternalScoreStatus()
-    {
-        return $this->container['internal_score_status'];
-    }
-
-    /**
-     * Sets internal_score_status
-     *
-     * @param string $internal_score_status Internal checks status
-     *
-     * @return $this
-     */
-    public function setInternalScoreStatus($internal_score_status)
-    {
-        $allowedValues = $this->getInternalScoreStatusAllowableValues();
-        if (!is_null($internal_score_status) && !in_array($internal_score_status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'internal_score_status', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['internal_score_status'] = $internal_score_status;
+        $this->container['error'] = $error;
 
         return $this;
     }

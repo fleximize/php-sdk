@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getToken**](AuthorisationApi.md#gettoken) | **POST** /get_token | Gets authentication token
 
 # **getToken**
-> \Swagger\Client\Model\InlineResponse200 getToken($body, $user_name, $password)
+> \Swagger\Client\Model\InlineResponse200 getToken($user_name, $password)
 
 Gets authentication token
 
@@ -23,17 +23,11 @@ $apiInstance = new Swagger\Client\Api\AuthorisationApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\LoginCredentials(); // \Swagger\Client\Model\LoginCredentials | Fleximize uses API token to allow access to the API called JWT. You can get your own token or ask fleximize admin to generate it for you.
-
-All Fleximize endpoints require authorization using the API token, which is expected to be included in all API requests to the server in a header that looks like the following: 
-
-**Authorization: Bearer {yourtokenhere}**
-
 $user_name = "user_name_example"; // string | 
 $password = "password_example"; // string | 
 
 try {
-    $result = $apiInstance->getToken($body, $user_name, $password);
+    $result = $apiInstance->getToken($user_name, $password);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuthorisationApi->getToken: ', $e->getMessage(), PHP_EOL;
@@ -45,12 +39,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\LoginCredentials**](../Model/LoginCredentials.md)| Fleximize uses API token to allow access to the API called JWT. You can get your own token or ask fleximize admin to generate it for you.
-
-All Fleximize endpoints require authorization using the API token, which is expected to be included in all API requests to the server in a header that looks like the following: 
-
-**Authorization: Bearer {yourtokenhere}**
- |
  **user_name** | **string**|  |
  **password** | [**string**](../Model/.md)|  |
 
@@ -70,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getToken**
-> \Swagger\Client\Model\InlineResponse200 getToken($body, $user_name, $password)
+> \Swagger\Client\Model\InlineResponse200 getToken($body)
 
 Gets authentication token
 
@@ -92,11 +80,9 @@ All Fleximize endpoints require authorization using the API token, which is expe
 
 **Authorization: Bearer {yourtokenhere}**
 
-$user_name = "user_name_example"; // string | 
-$password = "password_example"; // string | 
 
 try {
-    $result = $apiInstance->getToken($body, $user_name, $password);
+    $result = $apiInstance->getToken($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuthorisationApi->getToken: ', $e->getMessage(), PHP_EOL;
@@ -114,8 +100,6 @@ All Fleximize endpoints require authorization using the API token, which is expe
 
 **Authorization: Bearer {yourtokenhere}**
  |
- **user_name** | **string**|  |
- **password** | [**string**](../Model/.md)|  |
 
 ### Return type
 
