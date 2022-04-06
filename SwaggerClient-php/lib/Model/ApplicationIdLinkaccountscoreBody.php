@@ -1,6 +1,6 @@
 <?php
 /**
- * MoveInDate
+ * ApplicationIdLinkaccountscoreBody
  *
  * PHP version 5
  *
@@ -32,15 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * MoveInDate Class Doc Comment
+ * ApplicationIdLinkaccountscoreBody Class Doc Comment
  *
  * @category Class
- * @description Approximate move-in date. Format: YYYY-MM-DD        **Required for first director*
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MoveInDate implements ModelInterface, ArrayAccess
+class ApplicationIdLinkaccountscoreBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +48,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'move_in_date';
+    protected static $swaggerModelName = 'application_id_linkaccountscore_body';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +56,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-            ];
+        'token' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,7 +64,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-            ];
+        'token' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -94,7 +93,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-            ];
+        'token' => 'token'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -102,7 +101,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-            ];
+        'token' => 'setToken'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -110,7 +109,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-            ];
+        'token' => 'getToken'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -170,6 +169,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
     }
 
     /**
@@ -181,6 +181,9 @@ class MoveInDate implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['token'] === null) {
+            $invalidProperties[] = "'token' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -195,6 +198,30 @@ class MoveInDate implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets token
+     *
+     * @return string
+     */
+    public function getToken()
+    {
+        return $this->container['token'];
+    }
+
+    /**
+     * Sets token
+     *
+     * @param string $token AccountScore Customer Reference
+     *
+     * @return $this
+     */
+    public function setToken($token)
+    {
+        $this->container['token'] = $token;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *

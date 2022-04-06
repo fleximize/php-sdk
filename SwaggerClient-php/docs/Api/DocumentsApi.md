@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**postApplicationDocuments**](DocumentsApi.md#postapplicationdocuments) | **POST** /application/{application_id}/upload | Post application related document
 
 # **getAllowedDocTypes**
-> \Swagger\Client\Model\InlineResponse2003[] getAllowedDocTypes()
+> \Swagger\Client\Model\InlineResponse2004[] getAllowedDocTypes()
 
 Gets list of allowed document types to upload
 
@@ -44,7 +44,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2003[]**](../Model/InlineResponse2003.md)
+[**\Swagger\Client\Model\InlineResponse2004[]**](../Model/InlineResponse2004.md)
 
 ### Authorization
 

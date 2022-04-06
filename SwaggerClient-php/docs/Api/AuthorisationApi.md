@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 Gets authentication token
 
-Gets authentication token using credentials.    Token is valid for **7 days**. After that new token should be optained using the same endpoint
+Gets authentication token using credentials.    Token is valid for **7 days**. After that new token should be obtained using the same endpoint
 
 ### Example
 ```php
@@ -62,7 +62,7 @@ No authorization required
 
 Gets authentication token
 
-Gets authentication token using credentials.    Token is valid for **7 days**. After that new token should be optained using the same endpoint
+Gets authentication token using credentials.    Token is valid for **7 days**. After that new token should be obtained using the same endpoint
 
 ### Example
 ```php

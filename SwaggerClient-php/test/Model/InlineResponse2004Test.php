@@ -1,6 +1,6 @@
 <?php
 /**
- * MoveInDateTest
+ * InlineResponse2004Test
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Swagger\Client;
 
 /**
- * MoveInDateTest Class Doc Comment
+ * InlineResponse2004Test Class Doc Comment
  *
  * @category    Class
- * @description Approximate move-in date. Format: YYYY-MM-DD        **Required for first director*
+ * @description InlineResponse2004
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MoveInDateTest extends \PHPUnit_Framework_TestCase
+class InlineResponse2004Test extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,9 +69,23 @@ class MoveInDateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "MoveInDate"
+     * Test "InlineResponse2004"
      */
-    public function testMoveInDate()
+    public function testInlineResponse2004()
+    {
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * MoveInDate
+ * ApplicationIdUploadBody
  *
  * PHP version 5
  *
@@ -32,15 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * MoveInDate Class Doc Comment
+ * ApplicationIdUploadBody Class Doc Comment
  *
  * @category Class
- * @description Approximate move-in date. Format: YYYY-MM-DD        **Required for first director*
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MoveInDate implements ModelInterface, ArrayAccess
+class ApplicationIdUploadBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +48,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'move_in_date';
+    protected static $swaggerModelName = 'application_id_upload_body';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +56,8 @@ class MoveInDate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-            ];
+        'document_type' => 'int',
+'file' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,7 +65,8 @@ class MoveInDate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-            ];
+        'document_type' => 'int32',
+'file' => 'binary'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -94,7 +95,8 @@ class MoveInDate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-            ];
+        'document_type' => 'document_type',
+'file' => 'file'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -102,7 +104,8 @@ class MoveInDate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-            ];
+        'document_type' => 'setDocumentType',
+'file' => 'setFile'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -110,7 +113,8 @@ class MoveInDate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-            ];
+        'document_type' => 'getDocumentType',
+'file' => 'getFile'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -170,6 +174,8 @@ class MoveInDate implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['document_type'] = isset($data['document_type']) ? $data['document_type'] : null;
+        $this->container['file'] = isset($data['file']) ? $data['file'] : null;
     }
 
     /**
@@ -181,6 +187,12 @@ class MoveInDate implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['document_type'] === null) {
+            $invalidProperties[] = "'document_type' can't be null";
+        }
+        if ($this->container['file'] === null) {
+            $invalidProperties[] = "'file' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -195,6 +207,54 @@ class MoveInDate implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets document_type
+     *
+     * @return int
+     */
+    public function getDocumentType()
+    {
+        return $this->container['document_type'];
+    }
+
+    /**
+     * Sets document_type
+     *
+     * @param int $document_type One of `id` values returned by `/application/document-types` response
+     *
+     * @return $this
+     */
+    public function setDocumentType($document_type)
+    {
+        $this->container['document_type'] = $document_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets file
+     *
+     * @return string
+     */
+    public function getFile()
+    {
+        return $this->container['file'];
+    }
+
+    /**
+     * Sets file
+     *
+     * @param string $file Document file being uploaded
+     *
+     * @return $this
+     */
+    public function setFile($file)
+    {
+        $this->container['file'] = $file;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *

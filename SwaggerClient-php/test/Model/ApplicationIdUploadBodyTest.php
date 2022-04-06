@@ -1,6 +1,6 @@
 <?php
 /**
- * MoveInDateTest
+ * ApplicationIdUploadBodyTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Swagger\Client;
 
 /**
- * MoveInDateTest Class Doc Comment
+ * ApplicationIdUploadBodyTest Class Doc Comment
  *
  * @category    Class
- * @description Approximate move-in date. Format: YYYY-MM-DD        **Required for first director*
+ * @description ApplicationIdUploadBody
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MoveInDateTest extends \PHPUnit_Framework_TestCase
+class ApplicationIdUploadBodyTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,9 +69,23 @@ class MoveInDateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "MoveInDate"
+     * Test "ApplicationIdUploadBody"
      */
-    public function testMoveInDate()
+    public function testApplicationIdUploadBody()
+    {
+    }
+
+    /**
+     * Test attribute "document_type"
+     */
+    public function testPropertyDocumentType()
+    {
+    }
+
+    /**
+     * Test attribute "file"
+     */
+    public function testPropertyFile()
     {
     }
 }

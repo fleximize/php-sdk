@@ -1,9 +1,10 @@
-# InlineResponse2003
+# ApplicationIdUploadBody
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**result** | **bool** | Returns &#x27;true&#x27; if application have been linked correctly and &#x27;false&#x27; on failure. | [optional] 
+**document_type** | **int** | One of &#x60;id&#x60; values returned by &#x60;/application/document-types&#x60; response | 
+**file** | **string** | Document file being uploaded | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

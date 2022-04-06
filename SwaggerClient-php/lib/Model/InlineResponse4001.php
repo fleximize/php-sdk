@@ -1,6 +1,6 @@
 <?php
 /**
- * MoveInDate
+ * InlineResponse4001
  *
  * PHP version 5
  *
@@ -32,15 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * MoveInDate Class Doc Comment
+ * InlineResponse4001 Class Doc Comment
  *
  * @category Class
- * @description Approximate move-in date. Format: YYYY-MM-DD        **Required for first director*
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MoveInDate implements ModelInterface, ArrayAccess
+class InlineResponse4001 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +48,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'move_in_date';
+    protected static $swaggerModelName = 'inline_response_400_1';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +56,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-            ];
+        'result' => 'bool'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,7 +64,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-            ];
+        'result' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -94,7 +93,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-            ];
+        'result' => 'result'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -102,7 +101,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-            ];
+        'result' => 'setResult'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -110,7 +109,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-            ];
+        'result' => 'getResult'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -170,6 +169,7 @@ class MoveInDate implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -195,6 +195,30 @@ class MoveInDate implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets result
+     *
+     * @return bool
+     */
+    public function getResult()
+    {
+        return $this->container['result'];
+    }
+
+    /**
+     * Sets result
+     *
+     * @param bool $result Returns 'true' if application have been linked correctly and 'false' on failure.
+     *
+     * @return $this
+     */
+    public function setResult($result)
+    {
+        $this->container['result'] = $result;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *

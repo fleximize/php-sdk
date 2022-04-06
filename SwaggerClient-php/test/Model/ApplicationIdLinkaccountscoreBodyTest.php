@@ -1,6 +1,6 @@
 <?php
 /**
- * MoveInDateTest
+ * ApplicationIdLinkaccountscoreBodyTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Swagger\Client;
 
 /**
- * MoveInDateTest Class Doc Comment
+ * ApplicationIdLinkaccountscoreBodyTest Class Doc Comment
  *
  * @category    Class
- * @description Approximate move-in date. Format: YYYY-MM-DD        **Required for first director*
+ * @description ApplicationIdLinkaccountscoreBody
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MoveInDateTest extends \PHPUnit_Framework_TestCase
+class ApplicationIdLinkaccountscoreBodyTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,9 +69,16 @@ class MoveInDateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "MoveInDate"
+     * Test "ApplicationIdLinkaccountscoreBody"
      */
-    public function testMoveInDate()
+    public function testApplicationIdLinkaccountscoreBody()
+    {
+    }
+
+    /**
+     * Test attribute "token"
+     */
+    public function testPropertyToken()
     {
     }
 }

@@ -6,11 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAllowedDocTypes**](ApplicationApi.md#getalloweddoctypes) | **GET** /application/document-types | Gets list of allowed document types to upload
 [**getApplicationStatus**](ApplicationApi.md#getapplicationstatus) | **GET** /application/{application_id} | Get current application status by &#x60;application_id&#x60;
+[**linkAccountScore**](ApplicationApi.md#linkaccountscore) | **POST** /application/{application_id}/link-accountscore | Link customer open banking data.
 [**postApplication**](ApplicationApi.md#postapplication) | **POST** /application | Submits loan application
 [**postApplicationDocuments**](ApplicationApi.md#postapplicationdocuments) | **POST** /application/{application_id}/upload | Post application related document
 
 # **getAllowedDocTypes**
-> \Swagger\Client\Model\InlineResponse2003[] getAllowedDocTypes()
+> \Swagger\Client\Model\InlineResponse2004[] getAllowedDocTypes()
 
 Gets list of allowed document types to upload
 
@@ -46,7 +47,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2003[]**](../Model/InlineResponse2003.md)
+[**\Swagger\Client\Model\InlineResponse2004[]**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -109,6 +110,62 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **linkAccountScore**
+> \Swagger\Client\Model\InlineResponse2003 linkAccountScore($application_id, $body)
+
+Link customer open banking data.
+
+Provide AccountScore customer reference token.  This can be found on AccountScore portal or through their API and it should provided as UIID (not internal reference)
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Swagger\Client\Api\ApplicationApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$application_id = "application_id_example"; // string | application_id value returned in in the `/application` response
+$body = new \Swagger\Client\Model\ApplicationIdLinkaccountscoreBody(); // \Swagger\Client\Model\ApplicationIdLinkaccountscoreBody | 
+
+try {
+    $result = $apiInstance->linkAccountScore($application_id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApplicationApi->linkAccountScore: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **application_id** | **string**| application_id value returned in in the &#x60;/application&#x60; response |
+ **body** | [**\Swagger\Client\Model\ApplicationIdLinkaccountscoreBody**](../Model/ApplicationIdLinkaccountscoreBody.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
